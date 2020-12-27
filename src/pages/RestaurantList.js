@@ -20,6 +20,25 @@ export function RestaurantListPage() {
     });
   }, [page]);
 
+  let list = <Loading />;
+  if( restaurants ){
+    list = <>
+            <div className="block">
+              {restaurants.rows.map((restaurant) => {
+                return <Restaurant key={restaurant.id} restaurant={restaurant} />;
+              })}
+            </div>
+            <div className="block">
+              <Pagination
+                path="/restaurants"
+                page={page}
+                perPage={perPage}
+                count={restaurants?.count}
+              />
+            </div>
+          </>;
+  }
+
   return (
     <>
       <div className="box">
@@ -30,25 +49,7 @@ export function RestaurantListPage() {
           ]}
         />
       </div>
-      {restaurants == null ? (
-        <Loading />
-      ) : (
-        <>
-          <div className="block">
-            {restaurants.rows.map((restaurant) => {
-              return <Restaurant key={restaurant.id} restaurant={restaurant} />;
-            })}
-          </div>
-          <div className="block">
-            <Pagination
-              path="/restaurants"
-              page={page}
-              perPage={perPage}
-              count={restaurants?.count}
-            />
-          </div>
-        </>
-      )}
+      {list}
     </>
   );
 }
