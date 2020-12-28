@@ -1,3 +1,7 @@
+/**
+ * レストラン表示コンポーネント
+ * ・レストラン名、画像、レビューを表示する
+ */
 import { Link } from "react-router-dom";
 import { Review } from "./Review.js";
 

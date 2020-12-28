@@ -5,6 +5,10 @@ import { RootPage } from "./pages/Root.js";
 import { RestaurantDetailPage } from "./pages/RestaurantDetail.js";
 import { RestaurantListPage} from "./pages/RestaurantList.js";
 
+
+// ログインボタン
+// ・ログイン状態をチェック。ログイン中なら「ログアウト」、そうでなければ「ログイン」を表示する
+// ・ボタンクリック時に認証処理を呼び出す
 function AuthButton(){
     const { isLoading, isAuthenticated, loginWithRedirect, logout } = useAuth0();
     function handleClickLoginButton(){
@@ -44,6 +48,9 @@ function AuthButton(){
     );
 }
 
+// 各ページ共通のヘッダーコンポーネント
+// ・共通とはいえ、各ページで読み込むのではなくトップページ(App)専用
+//   ⇒ページ遷移は、コンテント領域のコンポーネントを入れ替えるという動きをするため
 function Header(){
     return(
         <section className="hero is-warning">
@@ -62,6 +69,7 @@ function Header(){
     );
 }
 
+// フッターコンポーネント
 function Footer(){
     return(
         <footer className="footer">
@@ -74,6 +82,10 @@ function Footer(){
     );
 }
 
+// ルートコンポーネント
+// ・ページ全体の構成
+// ・ログイン、ログアウトボタン
+// ・ルーティング(ページ遷移)の設定を行う
 export function App() {
     return(    
         <Router>    

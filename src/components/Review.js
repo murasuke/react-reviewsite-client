@@ -1,3 +1,8 @@
+/**
+ * レビュー表示コンポーネント
+ * ・レビュー1件分
+ */
+
 function padZero(x, digits) {
   return x.toString().padStart(digits, "0");
 }

@@ -1,3 +1,10 @@
+/**
+ * 「/」で表示するルートコンポーネント
+ *  ・副作用フック(useEffect)で上位3件を取得して表示する
+ *  ・画面ロード時のみ表示するため、依存(監視)する変数は明示的に指定しない(引数の[])
+ *  ・useEffectは戻り値にクリーンアップコードを返す。非同期関数を呼び出すととPromiseを返ししまいエラーとなるため
+ * 　　then()で処理するか、無名関数内でawaitする必要がある。
+ */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getRestaurants } from "../api.js";

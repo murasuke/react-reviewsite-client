@@ -1,3 +1,8 @@
+/**
+ * レストラン詳細情報を表示する
+ * ・レビューの表示、登録を行う
+ * ・isAuthenticatedでログイン中かどうかを判断して表示を切り替える
+ */
 import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -7,6 +12,11 @@ import { Breadcrumb, Loading, Pagination, Review } from "../components";
 function Form({ onSubmit }) {
   const { isAuthenticated } = useAuth0();
 
+  /**
+   * formのデータ(title,comment)を取り出して、送信処理(onSubmit)を呼び出す
+   * ・入力内容は同時にクリアする
+   * @param {*} event 
+   */
   async function handleFormSubmit(event) {
     event.preventDefault();
     if (onSubmit) {
