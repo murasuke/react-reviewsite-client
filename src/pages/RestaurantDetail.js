@@ -1,7 +1,7 @@
 /**
  * レストラン詳細情報を表示する
  * ・レビューの表示、登録を行う
- * ・isAuthenticatedでログイン中かどうかを判断して表示を切り替える
+ * ・レビューの登録はisAuthenticatedでログイン中かどうかを判断して表示を切り替える
  */
 import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
