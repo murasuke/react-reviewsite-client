@@ -25,7 +25,7 @@ export function Review({ review }) {
         <p className="mt-2 mb-2">{review.comment}</p>
         <p className="has-text-right">
           <small>
-            by {review.user.nickname} さん
+            by {review.User.nickname} さん
             <br />
             <Datetime date={new Date(review.createdAt)} />
           </small>

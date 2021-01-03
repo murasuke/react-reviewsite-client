@@ -28,6 +28,8 @@ import { Auth0Provider } from "@auth0/auth0-react";
  * Routeコンポーネントをラップした<ProtectedRoute>を作成する
  * * 未認証の場合は、Auth0の認証ページへリダイレクト
  * * 認証済みの場合は、該当ページを表示する
+ * 
+ * ## 参照ページ
  *   https://auth0.github.io/auth0-react/index.html
  *   https://dev.classmethod.jp/articles/protected-route-with-auth0-react-sdk/
  */

@@ -1,3 +1,7 @@
+/**
+ * レストラン一覧を表示する。
+ * ・
+ */
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Breadcrumb, Loading, Pagination, Restaurant } from "../components";

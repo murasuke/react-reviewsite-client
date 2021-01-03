@@ -1,3 +1,15 @@
+# このサンプルアプリについて
+
+https://zenn.dev/likr/articles/react-with-heroku
+をベースして、勉強用に機能強化をしています。
+* DBをsqliteに変更(別環境で簡単に利用できるようにする目的)
+* 未認証の場合、自動的に認証ページへリダイレクトされるリンク
+* sequelizeのマイグレーション機能を利用したDB、データ作成(ESModule利用)
+* mockを利用したユニットテスト
+* swaggerでのAPI定義
+# DBをsqliteに変更(別環境で簡単に利用できるようにする目的)
+* server側に記載
+
 # auth0-reactによる認証機能について
 ## 認証機能の組み込み
 <app />を返す<Auth0Provider />でラップする。
@@ -24,5 +36,8 @@ Routeコンポーネントをラップした<ProtectedRoute>を作成する
 
 ## 参照ページ
   https://auth0.github.io/auth0-react/index.html
-  
+
   https://dev.classmethod.jp/articles/protected-route-with-auth0-react-sdk/
+
+# sequelizeのマイグレーション機能を利用したDB、データ作成(ESModule利用)
+* server側に記載

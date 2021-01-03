@@ -27,7 +27,7 @@ export function Restaurant({ restaurant }) {
             </Link>
           </h3>
           <div>
-            {restaurant.reviews.length === 0 ? (
+            {restaurant.Reviews.length === 0 ? (
               <p>
                 レビューがまだありません。
                 <br />
@@ -36,7 +36,7 @@ export function Restaurant({ restaurant }) {
                 </Link>
               </p>
             ) : (
-              restaurant.reviews.map((review) => {
+              restaurant.Reviews.map((review) => {
                 return <Review key={review.id} review={review} />;
               })
             )}
